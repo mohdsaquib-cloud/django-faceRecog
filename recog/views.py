@@ -6,7 +6,7 @@ path = staticfiles_storage.path('haarcascade_frontalface_alt.xml')
 face_cascade = cv2.CascadeClassifier(path)
 class VideoCamera(object):
     def __init__(self):
-        self.video = cv2.VideoCapture(-1)
+        self.video = cv2.VideoCapture(0)
     def __del__(self):
         self.video.release()
         cv2.destroyAllWindows()
