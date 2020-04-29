@@ -26,7 +26,7 @@ SECRET_KEY = 'cbvzc2n98o^2n#k@0y3cgcxs0^=of(o%jxtg2x-(*edvvtlfx^'
 DEBUG = True
 
 ALLOWED_HOSTS = ['websaquib4.herokuapp.com']
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Application definition 
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
@@ -48,7 +48,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
 
 ROOT_URLCONF = 'faceRecog.urls'
 
