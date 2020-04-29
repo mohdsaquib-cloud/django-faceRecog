@@ -1,0 +1,13 @@
+{% extends 'recog/base.html' %} {% block content %}
+<div style="text-align: center; height: 200px;">
+  <img src="{% url 'video_feed' %}" />
+  <br />
+  <a
+    style="margin-top: 4px;"
+    type="submit"
+    href="{% url 'home' %}"
+    class="btn btn-primary"
+    >close</a
+  >
+</div>
+{% endblock %}
